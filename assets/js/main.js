@@ -59,7 +59,7 @@ const newsArticles = [
 const songs = [
   {
      title: 'kawaii100%',
-  image: './assets/download/KAWAII100%.png',
+  image: './assets/download/KAWAII100.png',
  youtube: 'https://www.youtube.com/watch?v=w44WoaDCFJQ',
   drive: 'https://drive.google.com/drive/folders/1S81fnm-AYr5usZpcuc0O2FI-FZGZqAwp'
   },
