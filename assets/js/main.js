@@ -9,27 +9,31 @@ const newsList = document.querySelector('[data-news-list]');
 const songList = document.querySelector('[data-song-list]');
 const newsModal = document.querySelector('[data-news-modal]');
 const modalPanel = document.querySelector('.modal-panel');
+const downloadModal = document.querySelector('[data-download-modal]');
+const downloadTitle = document.querySelector('[data-download-title]');
+const downloadLinks = document.querySelector('[data-download-links]');
+
 
 const newsArticles = [
   {
     id: 'sugar-skyline-release',
-    date: '2026.06.21',
-    datetime: '2026-06-21',
+    date: '2026.05.29',
+    datetime: '2026-05-29',
     category: 'Release',
-    title: '新曲「○○○」を公開しました',
+    title: '新曲「My color」を公開しました',
     body: [
-      '新曲「○○○」をYouTubeで公開しました。',
-      '歌ってみた用素材は、準備が整い次第DOWNLOADに追加予定です。'
+      '新曲「My color」をYouTubeで公開しました。',
+      '楽曲はショップでも流れるとのことですのでぜひ買い物をしながら自分だけのKAWAIIを見つけて欲しいです。'
     ],
     image: './assets/img/jacket-01.svg',
-    link: 'https://www.youtube.com/'
+    link: 'https://www.youtube.com/watch?v=_f_fyn2kaEE'
   },
   {
     id: 'cover-assets-added',
-    date: '2026.06.10',
-    datetime: '2026-06-10',
+    date: '2026.--.--',
+    datetime: '2026-00-00',
     category: 'Download',
-    title: '歌ってみた用素材を追加しました',
+    title: 'HPに歌ってみた用素材を追加しました',
     body: [
       '歌ってみた投稿に使えるinst、歌詞、サムネイル素材を追加しました。',
       '投稿前に利用規約をご確認ください。'
@@ -38,102 +42,81 @@ const newsArticles = [
     link: '#download'
   },
   {
-    id: 'booth-goods',
-    date: '2026.05.28',
-    datetime: '2026-05-28',
-    category: 'Event',
-    title: 'イベント頒布グッズのBOOTH通販を開始',
-    body: [
-      'イベントで頒布したグッズの通販を開始しました。最新の在庫状況はBOOTHをご確認ください。'
-    ],
-    image: './assets/img/goods-main.svg',
-    link: 'https://booth.pm/'
-  },
-  {
     id: 'guideline-update',
-    date: '2026.05.12',
-    datetime: '2026-05-12',
+    date: '2026.--.--',
+    datetime: '2026-00-00',
     category: 'Info',
     title: '二次利用ガイドラインを更新しました',
     body: [
-      'キー変更、動画素材の加工、収益化についてFAQを追加しました。投稿前にOK / NG / CREDITをご確認ください。'
+      '投稿前にOK / NG / CREDITをご確認ください。FAQもご参考ください。'
     ],
     image: '',
     link: '#guideline'
-  }
+  },
+  
 ];
 
 const songs = [
   {
-    title: '○○○',
-    image: './assets/img/jacket-01.svg',
-    download: '#'
+     title: 'kawaii100%',
+  image: './assets/download/KAWAII100%.png',
+ youtube: 'https://www.youtube.com/watch?v=w44WoaDCFJQ',
+  drive: 'https://drive.google.com/drive/folders/1S81fnm-AYr5usZpcuc0O2FI-FZGZqAwp'
   },
   {
-    title: '○○○',
-    image: './assets/img/jacket-02.svg',
-    download: '#'
+    title: 'telephone',
+    image: './assets/download/jacket-02.svg',
+  youtube: 'https://www.youtube.com/watch?v=o0SNzFbNo4g',
+  drive: 'https://drive.google.com/drive/folders/1Xn4_WdTWgig4Ym7AKp1ZChdF19o55Ofi'
   },
   {
-    title: '○○○',
-    image: './assets/img/jacket-03.svg',
-    download: '#'
+    title: 'Maos para cima!',
+    image: './assets/download/jacket-03.svg',
+  youtube: 'https://www.youtube.com/watch?v=gjbguYbJQNo',
+  drive: 'https://drive.google.com/drive/folders/1y8l5nt1_c0CuEzxwQDr1i1XVeWoEi4wn'
   },
   {
-    title: '○○○',
-    image: './assets/img/jacket-01.svg',
-    download: '#'
+    title: 'ダーリンダーリン',
+    image: './assets/download/jacket-03.svg',
+  youtube: 'https://www.youtube.com/watch?v=-LEB8vHLQbI',
+  drive: 'https://drive.google.com/drive/folders/1RCaQSTD3Y03g9zhZwEbapQNa3OKrxLYv'
   },
   {
-    title: '○○○',
-    image: './assets/img/jacket-02.svg',
-    download: '#'
+    title: 'On&On',
+    image: './assets/download/On&On.png',
+  youtube: 'https://www.youtube.com/watch?v=vmPrBtCbxK0',
+  drive: 'https://drive.google.com/drive/folders/1GdnmtB2LV2kgloQ6cvM3Ihvf8lPeAgY1'
   },
   {
-    title: '○○○',
-    image: './assets/img/jacket-03.svg',
-    download: '#'
+    title: 'Where shall we go?',
+    image: './assets/download/Where_shall_we_go.png',
+   youtube: 'https://www.youtube.com/watch?v=jyI9Xn67SHA',
+  drive: 'https://drive.google.com/drive/folders/1xE3WVw0pHkmuFDMzWNGUJ9TGh_Y23Qme'
   },
   {
-    title: '○○○',
-    image: './assets/img/jacket-01.svg',
-    download: '#'
+    title: 'Magic',
+     image: './assets/download/jacket-03.svg',
+  youtube: 'https://www.youtube.com/watch?v=tvhAVNJD6f8',
+  drive: 'https://drive.google.com/drive/folders/1dWPbBbucUxc1po64iLGtwLzSh34zijEg'
   },
   {
-    title: '○○○',
-    image: './assets/img/jacket-02.svg',
-    download: '#'
+    title: 'Sugar (2026 Version)',
+     image: './assets/download/jacket-03.svg',
+  youtube: 'https://www.youtube.com/watch?v=__CN3wm6p8g',
+  drive: 'https://drive.google.com/drive/folders/16oQDGiLWDqKlEVNL_H7pFcVFB81H21qF'
   },
   {
-    title: '○○○',
-    image: './assets/img/jacket-03.svg',
-    download: '#'
+    title: 'Sugar',
+    image: './assets/download/jacket-03.svg',
+  youtube: 'https://www.youtube.com/watch?v=zaCL9JWs-5Q',
+  drive: 'https://drive.google.com/drive/folders/1ool8p1yR4QZYyTAlWmlR3xE8fUbatMBa'
   },
   {
-    title: '○○○',
-    image: './assets/img/jacket-01.svg',
-    download: '#'
+    title: 'レモンスカッシュ',
+     image: './assets/download/jacket-03.svg',
+  youtube: 'https://www.youtube.com/watch?v=LNYIu5YnY7A',
+  drive: 'https://drive.google.com/drive/folders/1fXzaYjpIwim8eLedpQSh5QQZoBPVDcXQ'
   },
-  {
-    title: '○○○',
-    image: './assets/img/jacket-02.svg',
-    download: '#'
-  },
-  {
-    title: '○○○',
-    image: './assets/img/jacket-03.svg',
-    download: '#'
-  },
-  {
-    title: '○○○',
-    image: './assets/img/jacket-01.svg',
-    download: '#'
-  },
-  {
-    title: '○○○',
-    image: './assets/img/jacket-02.svg',
-    download: '#'
-  }
 ];
 
 const renderNews = () => {
@@ -156,44 +139,52 @@ const renderSongs = () => {
   if (!songList) return;
 
   const cardSongs = songs.slice(0, 10);
-  const textSongs = songs.slice(10);
 
   const cardMarkup = cardSongs
     .map(
       (song) => `
-        <a class="song-item" href="${song.download}" download>
-          <img src="${song.image}" alt="${song.title} jacket" />
+        <article class="song-item">
+          <button class="song-jacket-button" type="button" data-download-id="${song.title}">
+            <img src="${song.image}" alt="${song.title} jacket" />
+          </button>
           <h3>${song.title}</h3>
-        </a>
-      `
-    )
-    .join('');
-
-  const textListMarkup = textSongs
-    .map(
-      (song) => `
-        <li><a href="${song.download}" download>${song.title}</a></li>
+        </article>
       `
     )
     .join('');
 
   songList.innerHTML = `
-    <div class="song-card-grid" aria-label="画像付き楽曲カード">
-      ${cardMarkup}
-    </div>
-    ${
-      textSongs.length
-        ? `
-          <div class="song-text-panel">
-            <ul class="song-text-list" aria-label="11曲目以降の楽曲リンク">
-              ${textListMarkup}
-            </ul>
-          </div>
-        `
-        : ''
-    }
-  `;
+  <div class="song-card-grid" aria-label="人気楽曲">
+    ${cardMarkup}
+  </div>
+
+  <div class="other-downloads">
+    <h3>その他</h3>
+    <p>上記以外の歌ってみた素材はこちらからご確認ください。</p>
+    <a class="btn btn-primary" href="https://drive.google.com/drive/folders/1xcNEYE4h7h6iPRV3Jr6Q57jWi6j1LcJ2" target="_blank" rel="noreferrer">
+      ALL SONGS　
+    </a>
+  </div>
+`;
 };
+
+songList?.addEventListener('click', (event) => {
+  const button = event.target.closest('[data-download-id]');
+  if (!button) return;
+
+  const song = songs.find((item) => item.title === button.dataset.downloadId);
+  if (!song || !downloadModal || !downloadTitle || !downloadLinks) return;
+
+  downloadTitle.textContent = song.title;
+
+ downloadLinks.innerHTML = `
+  <a href="${song.youtube}" target="_blank" rel="noreferrer">YouTube</a>
+  <a href="${song.drive}" target="_blank" rel="noreferrer">素材DL (Drive)</a>
+`;
+
+  downloadModal.classList.add('is-open');
+  downloadModal.setAttribute('aria-hidden', 'false');
+});
 
 const openNewsModal = (article) => {
   if (!newsModal || !article) return;
@@ -231,6 +222,13 @@ const closeNewsModal = () => {
 
 renderNews();
 renderSongs();
+
+document.querySelectorAll('[data-download-close]').forEach((button) => {
+  button.addEventListener('click', () => {
+    downloadModal?.classList.remove('is-open');
+    downloadModal?.setAttribute('aria-hidden', 'true');
+  });
+});
 
 newsList?.addEventListener('click', (event) => {
   const button = event.target.closest('[data-news-id]');
@@ -271,12 +269,20 @@ navLinks.forEach((link) => {
 
 soundToggle?.addEventListener('click', () => {
   const isOn = soundToggle.getAttribute('aria-pressed') === 'true';
-  soundToggle.setAttribute('aria-pressed', String(!isOn));
-  soundToggle.textContent = isOn ? 'Sound Off' : 'Sound On';
+  const nextIsOn = !isOn;
+
+  soundToggle.setAttribute('aria-pressed', String(nextIsOn));
+  soundToggle.textContent = nextIsOn ? 'Sound Off' : 'Sound On';
 
   if (heroVideo) {
-    const muteValue = isOn ? '1' : '0';
-    heroVideo.src = `https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=${muteValue}&loop=1&playlist=dQw4w9WgXcQ&controls=0&playsinline=1&rel=0&modestbranding=1`;
+    heroVideo.muted = !nextIsOn;
+    heroVideo.volume = nextIsOn ? 1 : 0;
+
+    if (nextIsOn) {
+      heroVideo.play().catch(() => {
+        soundToggle.textContent = 'Tap to Sound On';
+      });
+    }
   }
 });
 
@@ -297,6 +303,7 @@ copyButton?.addEventListener('click', async () => {
       document.execCommand('copy');
       textarea.remove();
     }
+
     copyStatus.textContent = 'コピーしました。';
   } catch {
     const range = document.createRange();
@@ -327,4 +334,31 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     event.preventDefault();
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
+});
+
+const modal = document.getElementById("video-modal");
+const player = document.getElementById("video-player");
+const closeBtn = document.getElementById("close-video");
+
+document.querySelectorAll(".work-card[data-video]").forEach(card => {
+  card.addEventListener("click", () => {
+    const video = card.dataset.video;
+
+    console.log("読み込む動画:", video);
+
+    player.src = video;
+    player.load();
+
+    modal.classList.remove("hidden");
+
+    player.play().catch(error => {
+      console.log("動画再生エラー:", error);
+    });
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  modal.classList.add("hidden");
+  player.pause();
+  player.currentTime = 0;
 });

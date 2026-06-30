@@ -1,279 +1,354 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="めろくる公式サイト。作品、ニュース、歌ってみた素材DL、利用規約を掲載。" />
-    <title>めろくる | Official Website</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
-  <body class="wireframe">
-    <a class="skip-link" href="#main">本文へスキップ</a>
 
-    <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="めろくる top">
-       <img class="brand-logo" src="./assets/img/logo.png" alt="めろくる" />
-      </a>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="めろくる公式サイト。作品、ニュース、歌ってみた素材DL、利用規約を掲載。" />
+  <title>めろくる | Official Website</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
 
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span class="sr-only">メニューを開く</span>
-      </button>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
 
-      <nav class="site-nav" id="site-nav" data-nav>
-        <a href="#news">NEWS</a>
-        <a href="#biography">BIOGRAPHY</a>
-        <a href="#discography">DISCOGRAPHY</a>
-        <a href="#download">DOWNLOAD</a>
-        <a href="#guideline">GUIDELINE</a>
-        <a href="#goods">GOODS</a>
-        <a href="#contact">CONTACT</a>
-      </nav>
-    </header>
-
-    <main id="main">
-      <section class="hero section" id="top">
-        <div class="hero-video" aria-hidden="true">
-          <iframe
-            data-hero-video
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&controls=0&playsinline=1&rel=0&modestbranding=1"
-            title="背景動画"
-            allow="autoplay; encrypted-media; picture-in-picture"
-          ></iframe>
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <img class="hero-logo" src="./assets/img/activity-logo.svg" alt="めろくる" />
-          <div class="hero-actions" aria-label="主要リンク">
-            <a class="btn btn-primary" href="https://www.youtube.com/" target="_blank" rel="noreferrer">YouTube</a>
-            <a class="btn btn-secondary" href="#download">素材DL</a>
-            <a class="btn btn-ghost" href="#guideline">利用規約</a>
-          </div>
-        </div>
-        <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="false">Sound Off</button>
-      </section>
-
-      <section class="section compact" id="news">
-        <div class="section-heading">
-          <h2>NEWS</h2>
-        </div>
-        <div class="news-list" aria-label="NEWS" data-news-list></div>
-      </section>
-
-      <section class="section split" id="biography">
-        <div class="image-panel artist-square">
-          <img src="./assets/img/profile.jpg" alt="アーティスト写真" />
-        </div>
-        <div>
-          <h2>めろくる</h2>
-          <p class="body-large">日常にトキメキを、世界にキラメキを、未来にドキドキを、音楽と一緒に届けます。</p>
-          <p>
-            ○○○○年○月にボカロP活動を開始。代表作は「○○」（テキストは仮です）
-          </p>
-          <div class="social-links icon-links" aria-label="SNSリンク">
-            <a href="https://x.com/" target="_blank" rel="noreferrer" aria-label="X"><span aria-hidden="true">X</span></a>
-            <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2s-.2-1.7-.9-2.4c-.8-.9-1.8-.9-2.2-1C15.4 3.6 12 3.6 12 3.6s-3.4 0-6.5.2c-.4.1-1.4.1-2.2 1-.7.7-.9 2.4-.9 2.4S2.2 9.2 2.2 11v1.9c0 1.8.2 3.8.2 3.8s.2 1.7.9 2.4c.8.9 1.9.9 2.4 1 1.7.2 6.3.2 6.3.2s3.4 0 6.5-.2c.4-.1 1.4-.1 2.2-1 .7-.7.9-2.4.9-2.4s.2-2 .2-3.8V11c0-1.8-.2-3.8-.2-3.8ZM10.1 15.1V8.5l5.8 3.3-5.8 3.3Z"/></svg>
-            </a>
-            <a href="https://open.spotify.com/" target="_blank" rel="noreferrer" aria-label="Spotify">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 1 0 0 19.6 9.8 9.8 0 0 0 0-19.6Zm4.5 14.1c-.2.3-.6.4-.9.2-2.4-1.5-5.3-1.8-8.8-1-.4.1-.7-.1-.8-.5s.1-.7.5-.8c3.8-.9 7.2-.5 9.9 1.2.3.2.4.6.1.9Zm1.2-2.7c-.2.4-.7.5-1.1.3-2.7-1.7-6.8-2.1-10-1.2-.4.1-.9-.1-1-.6-.1-.4.1-.9.6-1 3.7-1 8.3-.5 11.4 1.4.4.2.5.8.1 1.1Zm.1-2.8C14.6 8.9 9.2 8.7 6.1 9.6c-.5.1-1-.2-1.2-.7-.1-.5.2-1 .7-1.2 3.6-1 9.6-.8 13.4 1.5.5.3.6.9.3 1.3-.3.5-.9.6-1.5.3Z"/></svg>
-            </a>
-            <a href="https://soundcloud.com/" target="_blank" rel="noreferrer" aria-label="SoundCloud">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.4 17.7h9.2a3.2 3.2 0 0 0 .1-6.4 4.9 4.9 0 0 0-9.3-1.9v8.3Zm-2 0h1V9.9c-.3-.2-.6-.3-1-.3v8.1Zm-2 0h1v-6.5c-.4.3-.7.8-1 1.3v5.2Zm-2 0h1v-4.2c-.4.3-.7.8-1 1.2v3Zm-2 0h1v-2.2a2.2 2.2 0 0 0-1 2.2Z"/></svg>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="discography">
-        <div class="section-heading">
-          <h2>DISCOGRAPHY</h2>
-        </div>
-
-        <div class="featured-work">
-          <a class="featured-card work-link" href="https://www.youtube.com/watch?v=VIDEO_ID_SUGAR_SKYLINE" target="_blank" rel="noreferrer">
-            <img src="./assets/img/jacket-01.svg" alt="Sugar Skyline jacket placeholder" />
-            <div class="featured-card-body">
-              <p class="featured-label">FEATURED WORK</p>
-              <h3>曲名やアルバムタイトル名が入ります</h3>
-            </div>
-          </a>
-        </div>
-
-        <div class="card-grid">
-          <a class="work-card work-link" href="https://www.youtube.com/watch?v=VIDEO_ID_MINT_PARADE" target="_blank" rel="noreferrer">
-            <img src="./assets/img/jacket-02.svg" alt="Mint Parade jacket placeholder" />
-          </a>
-          <a class="work-card work-link" href="https://www.youtube.com/watch?v=VIDEO_ID_TWINKLE_ROOM" target="_blank" rel="noreferrer">
-            <img src="./assets/img/jacket-03.svg" alt="Twinkle Room jacket placeholder" />
-          </a>
-          <a class="work-card work-link" href="https://www.youtube.com/watch?v=VIDEO_ID_SUGAR_SKYLINE" target="_blank" rel="noreferrer">
-            <img src="./assets/img/jacket-01.svg" alt="Sugar Skyline jacket placeholder" />
-          </a>
-        </div>
-        <p class="all-discography-link">
-          <a class="btn btn-primary" href="https://www.youtube.com/" target="_blank">ALL DISCOGRAPHY →</a>
-        </p>
-      </section>
-
-      <section class="section download-section" id="download">
-        <div class="section-heading">
-          <h2>DOWNLOAD</h2>
-        </div>
-        <div class="download-intro">
-          <div>
-            <p>歌ってみた投稿に必要な inst・歌詞・動画素材をまとめました。</p>
-          </div>
-          <a class="btn btn-primary" href="#guideline">利用規約を確認</a>
-        </div>
-
-        <div class="all-data-box">
-          <h3>All DATA</h3>
-          <div class="song-list" aria-label="全楽曲一覧" data-song-list></div>
-        </div>
-      </section>
-
-      <section class="section" id="guideline">
-        <div class="section-heading">
-          <h2>GUIDELINE</h2>
-          <p>楽しく、安心して使っていただくための利用ガイドです。投稿前にOK / NG / CREDITをご確認ください。</p>
-        </div>
-
-        <div class="guideline-grid">
-          <article class="rule-card ok">
-            <h3>OK</h3>
-            <ul>
-              <li>歌ってみた投稿</li>
-              <li>SNSでの紹介</li>
-              <li>非営利での二次創作</li>
-              <li>クレジット表記ありでの利用</li>
-            </ul>
-          </article>
-          <article class="rule-card ng">
-            <h3>NG</h3>
-            <ul>
-              <li>自作発言</li>
-              <li>無断販売</li>
-              <li>政治・宗教・公序良俗に反する利用</li>
-              <li>音源や素材の再配布</li>
-            </ul>
-          </article>
-        </div>
-
-        <article class="credit-box">
-          <div>
-            <p class="tag">CREDIT</p>
-            <h3>YouTube概要欄にコピペできます</h3>
-          </div>
-          <pre id="creditText">Original: [楽曲名] / めろくる
-Music & Lyrics: めろくる
-YouTube: https://www.youtube.com/
-Cover by: [Your Name]</pre>
-          <button class="btn btn-secondary small" type="button" data-copy-credit>Copy Credit</button>
-          <p class="copy-status" aria-live="polite" data-copy-status></p>
-        </article>
-
-        <div class="faq-list" aria-label="FAQ">
-          <details>
-            <summary>質問事項</summary>
-            <p>○○○○○</p>
-          </details>
-          <details>
-            <summary>質問事項</summary>
-            <p>○○○○○</p>
-          </details>
-          <details>
-            <summary>質問事項</summary>
-            <p>○○○○○</p>
-          </details>
-          <details>
-            <summary>質問事項</summary>
-            <p>○○○○○</p>
-          </details>
-        </div>
-      </section>
-
-      <section class="section goods-section" id="goods">
-        <div class="goods-copy">
-          <h2>GOODS</h2>
-          <p>CD、アクリルグッズ、ステッカーなどの通販情報はこちら。最新の在庫はBOOTHでご確認ください。</p>
-          <a class="btn btn-primary" href="https://booth.pm/" target="_blank" rel="noreferrer">BOOTH →</a>
-        </div>
-        <div class="goods-main">
-          <img src="./assets/img/goods-main.svg" alt="Official goods visual placeholder" />
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contact">
-        <div class="section-heading contact-heading">
-          <h2>CONTACT</h2>
-          <p>お仕事のご依頼、楽曲利用、その他のお問い合わせはこちらから。</p>
-        </div>
-        <div class="contact-layout">
-          <div class="contact-card">
-            <p class="tag">Mail</p>
-            <p class="mail">contact [at] example.com</p>
-            <ul class="notice-list">
-              <li>送信時は [at] を @ に変更してください。</li>
-              <li>お仕事のご相談は、希望納期・用途・ご予算感を添えてください。</li>
-              <li>楽曲利用については、使用予定の楽曲名と公開先URLをお知らせください。</li>
-            </ul>
-          </div>
-          <form class="contact-form" action="#" method="post">
-            <p class="form-label">MAIL FORM</p>
-            <label>
-              お問い合わせ種別
-              <select name="type">
-                <option>お仕事のご依頼</option>
-                <option>楽曲利用について</option>
-                <option>その他</option>
-              </select>
-            </label>
-            <label>
-              お名前
-              <input type="text" name="name" autocomplete="name" />
-            </label>
-            <label>
-              メール
-              <input type="email" name="email" autocomplete="email" />
-            </label>
-            <label>
-              内容
-              <textarea name="message" rows="5"></textarea>
-            </label>
-            <button class="btn btn-primary" type="button">送信内容を確認</button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <div class="modal" data-news-modal aria-hidden="true">
-      <div class="modal-backdrop" data-modal-close></div>
-      <article class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="news-modal-title" tabindex="-1">
-        <button class="modal-close" type="button" aria-label="閉じる" data-modal-close>×</button>
-        <div class="modal-meta">
-          <time data-modal-date></time>
-          <span data-modal-category></span>
-        </div>
-        <div class="modal-divider" aria-hidden="true"></div>
-        <h2 id="news-modal-title" data-modal-title></h2>
-        <div class="modal-divider" aria-hidden="true"></div>
-        <div class="modal-image" data-modal-image></div>
-        <div class="modal-body" data-modal-body></div>
-        <p class="modal-link-wrap"><a class="btn btn-secondary small" href="#" target="_blank" rel="noreferrer" data-modal-link>関連リンク</a></p>
-      </article>
-    </div>
-
-    <a class="back-to-top" href="#top" aria-label="ページ上部へ戻る">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5 5.7 11.3l1.4 1.4 3.9-3.9V20h2V8.8l3.9 3.9 1.4-1.4L12 5Z"/></svg>
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="めろくる top">
+      <img class="brand-logo" src="./assets/img/logo.png" alt="めろくる" />
     </a>
 
-    <footer class="site-footer">
-      <p>&copy; 2026 めろくる. All Rights Reserved.</p>
-    </footer>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="sr-only">メニューを開く</span>
+    </button>
 
-    <script src="./assets/js/main.js"></script>
-  </body>
+    <nav class="site-nav" id="site-nav" data-nav>
+      <a href="#news">NEWS</a>
+      <a href="#biography">BIOGRAPHY</a>
+      <a href="#discography">DISCOGRAPHY</a>
+      <a href="#download">DOWNLOAD</a>
+      <a href="#guideline">GUIDELINE</a>
+      <a href="#goods">GOODS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="top">
+      <div class="hero-video" aria-hidden="true">
+        <video class="hero-video-bg" data-hero-video autoplay muted loop playsinline>
+          <source src="./assets/video/hero.mp4" type="video/mp4">
+        </video>
+
+
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <img class="hero-logo" src="./assets/img/logo.png" alt="めろくる" />
+        <div class="hero-actions" aria-label="主要リンク">
+          <a class="btn btn-primary" href="https://www.youtube.com/@Mellowcle" target="_blank"
+            rel="noreferrer">YouTube</a>
+         <a class="btn btn-ghost" href="#download">素材DL</a>
+          <a class="btn btn-ghost" href="#guideline">利用規約</a>
+        </div>
+      </div>
+      <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="false">Sound On</button>
+    </section>
+
+    <section class="section compact" id="news">
+      <div class="section-heading">
+        <h2>NEWS</h2>
+      </div>
+      <div class="news-list" aria-label="NEWS" data-news-list></div>
+    </section>
+
+    <section class="section split" id="biography">
+      <div class="image-panel artist-square">
+        <img src="./assets/img/profile.png" alt="アーティスト写真" />
+      </div>
+      <div>
+        <h2>めろくる/Mellowcle</h2>
+        <p class="body-large">日常にトキメキを、<br>世界にキラメキを、<br>未来にドキドキを、<br>
+          音楽と一緒に届けます。</p>
+        <p>
+          【活動】<br>2022年にボカロP活動を開始。<br>おしゃれでカワイイ楽曲を中心に様々なジャンルの楽曲を制作。<br>ボカロ作品投稿以外にも、声優・Vtuber・ゲームなどへの楽曲提供を行う。<br><br>【代表作】<br>「SUPERHERO」feat.
+          鏡音レン<br>「Where shall we go?」feat.鏡音レン 鏡音リン<br>「Mãos para
+          cima! ~手を上げな~」feat.初音ミク<br>
+        </p>
+        <div class="social-links icon-links" aria-label="SNSリンク">
+          <a href="https://x.com/Mellowcle" target="_blank" rel="noreferrer" aria-label="X"><span
+              aria-hidden="true">X</span></a>
+          <a href="https://www.youtube.com/@Mellowcle" target="_blank" rel="noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M21.6 7.2s-.2-1.7-.9-2.4c-.8-.9-1.8-.9-2.2-1C15.4 3.6 12 3.6 12 3.6s-3.4 0-6.5.2c-.4.1-1.4.1-2.2 1-.7.7-.9 2.4-.9 2.4S2.2 9.2 2.2 11v1.9c0 1.8.2 3.8.2 3.8s.2 1.7.9 2.4c.8.9 1.9.9 2.4 1 1.7.2 6.3.2 6.3.2s3.4 0 6.5-.2c.4-.1 1.4-.1 2.2-1 .7-.7.9-2.4.9-2.4s.2-2 .2-3.8V11c0-1.8-.2-3.8-.2-3.8ZM10.1 15.1V8.5l5.8 3.3-5.8 3.3Z" />
+            </svg>
+
+          </a>
+          <a href="https://www.nicovideo.jp/user/122889833" target="_blank" rel="noreferrer" aria-label="Niconico">
+            <img src="./assets/img/niconico_icon.png" alt="">
+          </a>
+          <a href="https://music.apple.com/us/artist/mellowcle/1664005966" target="_blank" rel="noreferrer"
+            aria-label="Apple Music">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M16.9 3.2c-.8.1-1.8.6-2.4 1.3-.6.7-1.1 1.7-.9 2.7.9.1 1.8-.4 2.4-1 .6-.7 1-1.6.9-3zM19 17.3c-.4.9-.6 1.3-1.1 2-.7 1-1.7 2.2-2.9 2.2-1.1 0-1.4-.7-2.9-.7s-1.9.7-2.9.7c-1.2 0-2.1-1.1-2.8-2.1-2-2.8-2.2-6.1-1-7.9.9-1.3 2.3-2.2 3.7-2.2 1.4 0 2.3.8 3.5.8 1.1 0 1.8-.8 3.5-.8 1.2 0 2.5.7 3.4 1.9-3 .8-2.5 5.1-.5 6.1z" />
+            </svg>
+          </a>
+          <a href="https://open.spotify.com/intl-ja/artist/7ylTFjdr6lbBsuQdHWQwtc?si=A3aUggEfQsmSbVbOqlrnvQ&nd=1&dlsi=b5f524f1eedf45e6"
+            target="_blank" rel="noreferrer" aria-label="Spotify">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 2.2a9.8 9.8 0 1 0 0 19.6 9.8 9.8 0 0 0 0-19.6Zm4.5 14.1c-.2.3-.6.4-.9.2-2.4-1.5-5.3-1.8-8.8-1-.4.1-.7-.1-.8-.5s.1-.7.5-.8c3.8-.9 7.2-.5 9.9 1.2.3.2.4.6.1.9Zm1.2-2.7c-.2.4-.7.5-1.1.3-2.7-1.7-6.8-2.1-10-1.2-.4.1-.9-.1-1-.6-.1-.4.1-.9.6-1 3.7-1 8.3-.5 11.4 1.4.4.2.5.8.1 1.1Zm.1-2.8C14.6 8.9 9.2 8.7 6.1 9.6c-.5.1-1-.2-1.2-.7-.1-.5.2-1 .7-1.2 3.6-1 9.6-.8 13.4 1.5.5.3.6.9.3 1.3-.3.5-.9.6-1.5.3Z" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/mellowcle_pop/" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5Zm4.75-3.25a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25Z" />
+            </svg>
+          </a>
+          <a href="https://potofu.me/mellowcle" target="_blank" rel="noreferrer" aria-label="foriio">
+            <span aria-hidden="true">f</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="discography">
+      <div class="section-heading">
+        <h2>DISCOGRAPHY</h2>
+      </div>
+
+      
+
+<div class="card-grid">
+<a class="work-card work-card-coming-soon">
+  <div class="coming-soon-card">
+      <img src="./assets/discography/test.png" alt="Aurora jacket" />
+
+  </div>
+  <div class="work-card-body">
+    <h3>COMING SOON</h3>
+   <p class="work-description">？？？</p>
+  </div>
+</a>
+
+  <a class="work-card" data-video="./assets/video/Aurora_XFD.mp4">
+    <img src="./assets/discography/Aurora.png" alt="Aurora jacket" />
+    <div class="work-card-body">
+  <h3>Aurora</h3>
+  <p class="work-description">2025ベストアルバム</p>
+</div>
+  </a>
+
+  <a class="work-card" data-video="./assets/video/Summer_Kiss_XFD.mp4">
+   <img src="./assets/discography/Summer Kiss_Jacket.png" alt="Rainbow jacket" />
+    <div class="work-card-body">
+      <h3>Summer Kiss</h3>
+     <p class="work-description">夏色花梨オンリーアルバム</p>
+    </div>
+  </a>
+
+  <a class="work-card" data-video="./assets/video/LR_XFD.mp4">
+    <img src="./assets/discography/LR_jacket.png" alt="Last Romance jacket" />
+    <div class="work-card-body">
+      <h3>LR<br> </h3>
+       <p class="work-description">鏡音オンリーアルバム</p>
+    </div>
+  </a>
+</div>
+
+      <p class="all-discography-link">
+        <a class="btn btn-primary" href="https://www.youtube.com/@Mellowcle/releases" target="_blank" rel="noreferrer">
+          ALL DISCOGRAPHY →
+        </a>
+      </p>
+    </section>
+
+
+    <section class="section download-section" id="download">
+      <div class="section-heading">
+        <h2>DOWNLOAD</h2>
+      </div>
+      <div class="download-intro">
+        <div>
+          <p>歌ってみた投稿に必要な inst・歌詞をまとめました。</p>
+        </div>
+        <a class="btn btn-primary" href="#guideline">利用規約を確認</a>
+      </div>
+
+      <div class="all-data-box">
+        <h3>主な楽曲</h3>
+        <div class="song-list" aria-label="全楽曲一覧" data-song-list></div>
+      </div>
+    </section>
+
+    <section class="section" id="guideline">
+      <div class="section-heading">
+        <h2>GUIDELINE</h2>
+        <p>楽しく、安心して使っていただくための利用ガイドです。投稿前にOK / NG / CREDITをご確認ください。</p>
+      </div>
+
+      <div class="guideline-grid">
+        <article class="rule-card ok">
+          <h3>OK</h3>
+          <ul>
+            <li>歌ってみた投稿</li>
+            <li>SNSでの紹介</li>
+            <li>非営利での二次創作</li>
+            <li>クレジット表記ありでの利用</li>
+            <li>歌詞を他言語に翻訳しての歌ってみた投稿</li>
+          </ul>
+        </article>
+        <article class="rule-card ng">
+          <h3>NG</h3>
+          <ul>
+            <li>自作発言</li>
+            <li>無断販売</li>
+            <li>政治・宗教・公序良俗に反する利用</li>
+            <li>音源や素材の再配布</li>
+          </ul>
+        </article>
+      </div>
+
+      <article class="credit-box">
+        <div>
+          <p class="tag">CREDIT</p>
+          <h3>YouTubeなどの概要欄にコピペできます</h3>
+        </div>
+        <pre id="creditText">Original: [楽曲名] / めろくる
+Music & Lyrics: めろくる
+YouTube: https://www.youtube.com/@Mellowcle
+Cover by: [Your Name]</pre>
+        <button class="btn btn-secondary small" type="button" data-copy-credit>Copy Credit</button>
+        <p class="copy-status" aria-live="polite" data-copy-status></p>
+      </article>
+
+      <div class="faq-list" aria-label="FAQ">
+        <details>
+          <summary>Q.踊ってみたの音源利用は可能ですか？</summary>
+          <p>A.上記OKの範囲内でしたら大歓迎です。SNS等で宣伝の際はぜひメンションで教えていただければ嬉しいです。</p>
+        </details>
+        <details>
+          <summary>Q.営利目的でのライブ演奏、配信、収録、録音などで使用は可能ですか？</summary>
+          <p>A.別途こちらまでお問い合わせお願いします。<br>　mellowcle [★] gmail.com（送信時は [★] を @ に変更してください。）</p>
+        </details>
+        <details>
+          <summary>質問事項</summary>
+          <p>○○○○○</p>
+        </details>
+        <details>
+          <summary>質問事項</summary>
+          <p>○○○○○</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section goods-section" id="goods">
+      <div class="goods-copy">
+        <h2>GOODS</h2>
+        <p>CD、アクリルグッズ、ステッカーなどの通販情報はこちら。最新の在庫はBOOTHでご確認ください。</p>
+        <a class="btn btn-primary" href="https://mellowcle.booth.pm/" target="_blank" rel="noreferrer">BOOTH →</a>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="section-heading contact-heading">
+        <h2>CONTACT</h2>
+        <p>お仕事のご依頼、楽曲利用、その他のお問い合わせはこちらから。</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-card">
+          <p class="tag">Mail</p>
+          <p class="mail">mellowcle [★] gmail.com</p>
+          <ul class="notice-list">
+            <li>送信時は [★] を @ に変更してください。</li>
+            <li>お仕事のご相談は、希望納期・用途・ご予算感を添えてください。</li>
+            <li>楽曲利用については、使用予定の楽曲名と公開先URLをお知らせください。</li>
+          </ul>
+        </div>
+        <form class="contact-form" action="#" method="post">
+          <p class="form-label">MAIL FORM</p>
+          <label>
+            お問い合わせ種別
+            <select name="type">
+              <option>お仕事のご依頼</option>
+              <option>楽曲利用について</option>
+              <option>その他</option>
+            </select>
+          </label>
+          <label>
+            お名前
+            <input type="text" name="name" autocomplete="name" />
+          </label>
+          <label>
+            メール
+            <input type="email" name="email" autocomplete="email" />
+          </label>
+          <label>
+            内容
+            <textarea name="message" rows="5"></textarea>
+          </label>
+          <button class="btn btn-primary" type="button">送信内容を確認</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- DOWNLOAD modal -->
+  <div class="download-modal" data-download-modal aria-hidden="true">
+    <div class="download-modal-backdrop" data-download-close></div>
+
+    <div class="download-modal-panel">
+      <button type="button" class="modal-close" data-download-close>×</button>
+      <h2 data-download-title>DOWNLOAD</h2>
+      <div class="download-modal-links" data-download-links></div>
+    </div>
+  </div>
+
+
+  <div class="modal" data-news-modal aria-hidden="true">
+    <div class="modal-backdrop" data-modal-close></div>
+    <article class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="news-modal-title" tabindex="-1">
+      <button class="modal-close" type="button" aria-label="閉じる" data-modal-close>×</button>
+      <div class="modal-meta">
+        <time data-modal-date></time>
+        <span data-modal-category></span>
+      </div>
+      <div class="modal-divider" aria-hidden="true"></div>
+      <h2 id="news-modal-title" data-modal-title></h2>
+      <div class="modal-divider" aria-hidden="true"></div>
+      <div class="modal-image" data-modal-image></div>
+      <div class="modal-body" data-modal-body></div>
+      <p class="modal-link-wrap"><a class="btn btn-secondary small" href="#" target="_blank" rel="noreferrer"
+          data-modal-link>関連リンク</a></p>
+    </article>
+  </div>
+
+  <a class="back-to-top" href="#top" aria-label="ページ上部へ戻る">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 5 5.7 11.3l1.4 1.4 3.9-3.9V20h2V8.8l3.9 3.9 1.4-1.4L12 5Z" />
+    </svg>
+  </a>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 めろくる. All Rights Reserved.</p>
+  </footer>
+
+  <div id="video-modal" class="video-modal hidden">
+  <div class="video-box">
+    <button id="close-video">×</button>
+    <video id="video-player" controls></video>
+  </div>
+</div>
+
+
+  <script src="./assets/js/main.js"></script>
+
+  
+</body>
+
 </html>
