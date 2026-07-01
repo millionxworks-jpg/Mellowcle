@@ -1811,3 +1811,14 @@ body.wireframe .sound-toggle {
 .download-intro .section-copy .jp-text {
   color: var(--color-muted);
 }
+@media (max-width: 768px) {
+  .hero-actions {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+
+  .hero-actions .btn {
+    width: 220px;
+  }
+}
