@@ -22,8 +22,8 @@ const newsArticles = [
     category: 'Release',
     title: '新曲「My color」を公開しました',
     body: [
-      '新曲「My color」をYouTubeで公開しました。',
-      '楽曲はショップでも流れるとのことですのでぜひ買い物をしながら自分だけのKAWAIIを見つけて欲しいです。'
+      '新曲「My color」をYouTubeで公開しました',
+      'ぜひ買い物をしながら自分だけのKAWAIIを見つけて欲しいです'
     ],
     image: './assets/img/jacket-01.svg',
     link: 'https://www.youtube.com/watch?v=_f_fyn2kaEE'
@@ -35,8 +35,8 @@ const newsArticles = [
     category: 'Download',
     title: 'HPに歌ってみた用素材を追加しました',
     body: [
-      '歌ってみた投稿に使えるinst、歌詞、サムネイル素材を追加しました。',
-      '投稿前に利用規約をご確認ください。'
+      '歌ってみた投稿に使えるinst、歌詞、サムネイル素材を追加しました',
+      '投稿前に利用規約をご確認ください'
     ],
     image: './assets/img/hero-visual.svg',
     link: '#download'
@@ -48,7 +48,7 @@ const newsArticles = [
     category: 'Info',
     title: '二次利用ガイドラインを更新しました',
     body: [
-      '投稿前にOK / NG / CREDITをご確認ください。FAQもご参考ください。'
+      '投稿前に　OK / NG / CREDIT / FAQ　をご確認ください'
     ],
     image: '',
     link: '#guideline'
@@ -57,6 +57,12 @@ const newsArticles = [
 ];
 
 const songs = [
+    {
+    title: 'Sugar (2026 Version)',
+     image: './assets/download/Sugar2026.jpg',
+  youtube: 'https://www.youtube.com/watch?v=__CN3wm6p8g',
+  drive: 'https://drive.google.com/drive/folders/16oQDGiLWDqKlEVNL_H7pFcVFB81H21qF'
+  },
   {
      title: 'kawaii100%',
   image: './assets/download/KAWAII100.png',
@@ -65,19 +71,19 @@ const songs = [
   },
   {
     title: 'telephone',
-    image: './assets/download/jacket-02.svg',
+    image: './assets/download/Telephone.png',
   youtube: 'https://www.youtube.com/watch?v=o0SNzFbNo4g',
   drive: 'https://drive.google.com/drive/folders/1Xn4_WdTWgig4Ym7AKp1ZChdF19o55Ofi'
   },
   {
     title: 'Maos para cima!',
-    image: './assets/download/jacket-03.svg',
+    image: './assets/download/Maos para cima!.png',
   youtube: 'https://www.youtube.com/watch?v=gjbguYbJQNo',
   drive: 'https://drive.google.com/drive/folders/1y8l5nt1_c0CuEzxwQDr1i1XVeWoEi4wn'
   },
   {
     title: 'ダーリンダーリン',
-    image: './assets/download/jacket-03.svg',
+    image: './assets/download/Darlingdarling.png',
   youtube: 'https://www.youtube.com/watch?v=-LEB8vHLQbI',
   drive: 'https://drive.google.com/drive/folders/1RCaQSTD3Y03g9zhZwEbapQNa3OKrxLYv'
   },
@@ -95,25 +101,19 @@ const songs = [
   },
   {
     title: 'Magic',
-     image: './assets/download/jacket-03.svg',
+     image: './assets/download/Magic.png',
   youtube: 'https://www.youtube.com/watch?v=tvhAVNJD6f8',
   drive: 'https://drive.google.com/drive/folders/1dWPbBbucUxc1po64iLGtwLzSh34zijEg'
   },
   {
-    title: 'Sugar (2026 Version)',
-     image: './assets/download/jacket-03.svg',
-  youtube: 'https://www.youtube.com/watch?v=__CN3wm6p8g',
-  drive: 'https://drive.google.com/drive/folders/16oQDGiLWDqKlEVNL_H7pFcVFB81H21qF'
-  },
-  {
     title: 'Sugar',
-    image: './assets/download/jacket-03.svg',
+    image: './assets/download/Sugar.png',
   youtube: 'https://www.youtube.com/watch?v=zaCL9JWs-5Q',
   drive: 'https://drive.google.com/drive/folders/1ool8p1yR4QZYyTAlWmlR3xE8fUbatMBa'
   },
   {
     title: 'レモンスカッシュ',
-     image: './assets/download/jacket-03.svg',
+     image: './assets/download/lemonsquash.png',
   youtube: 'https://www.youtube.com/watch?v=LNYIu5YnY7A',
   drive: 'https://drive.google.com/drive/folders/1fXzaYjpIwim8eLedpQSh5QQZoBPVDcXQ'
   },
@@ -159,8 +159,8 @@ const renderSongs = () => {
   </div>
 
   <div class="other-downloads">
-    <h3>その他</h3>
-    <p>上記以外の歌ってみた素材はこちらからご確認ください。</p>
+    <h3>More Tracks</h3>
+    <p>上記以外の歌ってみた素材はこちらからどうぞ</p>
     <a class="btn btn-primary" href="https://drive.google.com/drive/folders/1xcNEYE4h7h6iPRV3Jr6Q57jWi6j1LcJ2" target="_blank" rel="noreferrer">
       ALL SONGS　
     </a>
@@ -304,7 +304,7 @@ copyButton?.addEventListener('click', async () => {
       textarea.remove();
     }
 
-    copyStatus.textContent = 'コピーしました。';
+    copyStatus.textContent = 'コピーしました';
   } catch {
     const range = document.createRange();
     const creditText = document.getElementById('creditText');
@@ -315,7 +315,7 @@ copyButton?.addEventListener('click', async () => {
       selection.addRange(range);
     }
     const copied = document.execCommand('copy');
-    copyStatus.textContent = copied ? 'コピーしました。' : '選択された文面をコピーしてください。';
+    copyStatus.textContent = copied ? 'コピーしました' : '選択された文面をコピーしてください。';
   }
 
   window.setTimeout(() => {

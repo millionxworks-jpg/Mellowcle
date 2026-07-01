@@ -448,6 +448,9 @@ h3 {
 .section-heading p {
   color: var(--color-muted);
 }
+#discography .section-heading {
+  margin-bottom: 48px;
+}
 
 @media (min-width: 1100px) {
   #guideline .section-heading p,
@@ -524,7 +527,7 @@ h3 {
 }
 
 .artist-square {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 2 / 3;
 }
 
 .artist-square img {
@@ -1747,7 +1750,9 @@ body.wireframe .sound-toggle {
   #discography .card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
+#discography .card-grid {
+  margin-top: 32px;
+}
   .work-card-body h3 {
     font-size: 0.85rem;
   }
@@ -1766,4 +1771,43 @@ body.wireframe .sound-toggle {
     gap: 16px;
     justify-content: center;
   }
+}
+.all-data-box h3 {
+  text-align: center;
+  
+}
+.pink-text {
+  color: #fd7eaa;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.discography-note {
+  margin-top: 16px;
+}
+
+.section-copy {
+  margin-top: 18px;
+}
+
+.section-copy .jp-text {
+  margin: 0;              /* 下の余白も消す */
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.section-copy .en-text {
+  margin: 2px 0 0 0;      /* 上だけ2px */
+  color: #93B4CC;
+  opacity: 1;
+  line-height: 1.5;
+ font-style: italic;
+  font-size: 1rem;
+}
+
+.download-intro .section-copy .en-text {
+  color: #93B4CC;
+  opacity: 1;
+}
+.download-intro .section-copy .jp-text {
+  color: var(--color-muted);
 }
