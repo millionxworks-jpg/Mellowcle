@@ -14,47 +14,6 @@ const downloadTitle = document.querySelector('[data-download-title]');
 const downloadLinks = document.querySelector('[data-download-links]');
 
 
-const newsArticles = [
-  {
-    id: 'sugar-skyline-release',
-    date: '2026.05.29',
-    datetime: '2026-05-29',
-    category: 'Release',
-    title: '新曲「My color」を公開しました',
-    body: [
-      '新曲「My color」をYouTubeで公開しました',
-      'ぜひ買い物をしながら自分だけのKAWAIIを見つけて欲しいです'
-    ],
-    image: './assets/img/jacket-01.svg',
-    link: 'https://www.youtube.com/watch?v=_f_fyn2kaEE'
-  },
-  {
-    id: 'cover-assets-added',
-    date: '2026.--.--',
-    datetime: '2026-00-00',
-    category: 'Download',
-    title: 'HPに歌ってみた用素材を追加しました',
-    body: [
-      '歌ってみた投稿に使えるinst、歌詞、サムネイル素材を追加しました',
-      '投稿前に利用規約をご確認ください'
-    ],
-    image: './assets/img/hero-visual.svg',
-    link: '#download'
-  },
-  {
-    id: 'guideline-update',
-    date: '2026.--.--',
-    datetime: '2026-00-00',
-    category: 'Info',
-    title: '二次利用ガイドラインを更新しました',
-    body: [
-      '投稿前に　OK / NG / CREDIT / FAQ　をご確認ください'
-    ],
-    image: '',
-    link: '#guideline'
-  },
-  
-];
 
 const songs = [
     {
@@ -156,14 +115,6 @@ const renderSongs = () => {
   songList.innerHTML = `
   <div class="song-card-grid" aria-label="人気楽曲">
     ${cardMarkup}
-  </div>
-
-  <div class="other-downloads">
-    <h3>More Tracks</h3>
-    <p>上記以外の歌ってみた素材はこちらからどうぞ</p>
-    <a class="btn btn-primary" href="https://drive.google.com/drive/folders/1xcNEYE4h7h6iPRV3Jr6Q57jWi6j1LcJ2" target="_blank" rel="noreferrer">
-      ALL SONGS　
-    </a>
   </div>
 `;
 };
@@ -286,42 +237,7 @@ soundToggle?.addEventListener('click', () => {
   }
 });
 
-copyButton?.addEventListener('click', async () => {
-  const text = document.getElementById('creditText')?.innerText || '';
 
-  try {
-    if (navigator.clipboard?.writeText) {
-      await navigator.clipboard.writeText(text);
-    } else {
-      const textarea = document.createElement('textarea');
-      textarea.value = text;
-      textarea.setAttribute('readonly', '');
-      textarea.style.position = 'fixed';
-      textarea.style.opacity = '0';
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand('copy');
-      textarea.remove();
-    }
-
-    copyStatus.textContent = 'コピーしました';
-  } catch {
-    const range = document.createRange();
-    const creditText = document.getElementById('creditText');
-    if (creditText) {
-      range.selectNodeContents(creditText);
-      const selection = window.getSelection();
-      selection.removeAllRanges();
-      selection.addRange(range);
-    }
-    const copied = document.execCommand('copy');
-    copyStatus.textContent = copied ? 'コピーしました' : '選択された文面をコピーしてください。';
-  }
-
-  window.setTimeout(() => {
-    copyStatus.textContent = '';
-  }, 2600);
-});
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', (event) => {
@@ -361,4 +277,64 @@ closeBtn.addEventListener("click", () => {
   modal.classList.add("hidden");
   player.pause();
   player.currentTime = 0;
+});
+
+const worksCards = document.querySelectorAll(".work-modal-trigger");
+const worksModal = document.querySelector(".works-modal");
+worksCards.forEach(card => {
+  card.addEventListener("click", () => {
+    document.querySelector("#works-title").textContent = card.dataset.title;
+    document.querySelector("#works-artist").textContent = card.dataset.artist;
+    document.querySelector("#works-role").textContent = card.dataset.role;
+    document.querySelector("#works-link").href = card.dataset.url;
+
+    worksModal.classList.add("is-open");
+  });
+});
+
+document.querySelectorAll("[data-works-close]").forEach((button) => {
+  button.addEventListener("click", () => {
+    worksModal.classList.remove("is-open");
+    worksModal.setAttribute("aria-hidden", "true");
+  });
+});
+const tabs = document.querySelectorAll(".lang-tab");
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+
+    copyStatus.textContent = ''; // ← ここ！
+
+    if (tab.dataset.lang === "en") {
+      document.body.classList.add("lang-en");
+    } else {
+      document.body.classList.remove("lang-en");
+    }
+  });
+});
+copyButton?.addEventListener('click', async () => {
+  const selector = document.body.classList.contains('lang-en')
+    ? '#guideline .credit-text.lang-en'
+    : '#guideline .credit-text.lang-ja';
+
+  const text = document.querySelector(selector)?.innerText || '';
+
+  if (!text) return;
+
+  try {
+    await navigator.clipboard.writeText(text);
+    copyStatus.textContent = document.body.classList.contains('lang-en')
+  ? 'Credit copied!'
+  : 'コピーしました';
+  } catch {
+    copyStatus.textContent = document.body.classList.contains('lang-en')
+  ? 'Credit Copy failed'
+  : 'コピーに失敗しました';
+  }
+
+  window.setTimeout(() => {
+    copyStatus.textContent = '';
+  }, 2600);
 });
