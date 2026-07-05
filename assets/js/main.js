@@ -24,55 +24,55 @@ const songs = [
   },
   {
      title: 'kawaii100%',
-  image: './assets/download/KAWAII100.png',
+  image: './assets/download/KAWAII100.jpg',
  youtube: 'https://www.youtube.com/watch?v=w44WoaDCFJQ',
   drive: 'https://drive.google.com/drive/folders/1S81fnm-AYr5usZpcuc0O2FI-FZGZqAwp'
   },
   {
     title: 'telephone',
-    image: './assets/download/Telephone.png',
+    image: './assets/download/Telephone.jpg',
   youtube: 'https://www.youtube.com/watch?v=o0SNzFbNo4g',
   drive: 'https://drive.google.com/drive/folders/1Xn4_WdTWgig4Ym7AKp1ZChdF19o55Ofi'
   },
   {
     title: 'Maos para cima!',
-    image: './assets/download/Maos para cima!.png',
+    image: './assets/download/Maos para cima!.jpg',
   youtube: 'https://www.youtube.com/watch?v=gjbguYbJQNo',
   drive: 'https://drive.google.com/drive/folders/1y8l5nt1_c0CuEzxwQDr1i1XVeWoEi4wn'
   },
   {
     title: 'ダーリンダーリン',
-    image: './assets/download/Darlingdarling.png',
+    image: './assets/download/Darlingdarling.jpg',
   youtube: 'https://www.youtube.com/watch?v=-LEB8vHLQbI',
   drive: 'https://drive.google.com/drive/folders/1RCaQSTD3Y03g9zhZwEbapQNa3OKrxLYv'
   },
   {
     title: 'On&On',
-    image: './assets/download/On&On.png',
+    image: './assets/download/On&On.jpg',
   youtube: 'https://www.youtube.com/watch?v=vmPrBtCbxK0',
   drive: 'https://drive.google.com/drive/folders/1GdnmtB2LV2kgloQ6cvM3Ihvf8lPeAgY1'
   },
   {
     title: 'Where shall we go?',
-    image: './assets/download/Where_shall_we_go.png',
+    image: './assets/download/Where_shall_we_go.jpg',
    youtube: 'https://www.youtube.com/watch?v=jyI9Xn67SHA',
   drive: 'https://drive.google.com/drive/folders/1xE3WVw0pHkmuFDMzWNGUJ9TGh_Y23Qme'
   },
   {
     title: 'Magic',
-     image: './assets/download/Magic.png',
+     image: './assets/download/Magic.jpg',
   youtube: 'https://www.youtube.com/watch?v=tvhAVNJD6f8',
   drive: 'https://drive.google.com/drive/folders/1dWPbBbucUxc1po64iLGtwLzSh34zijEg'
   },
   {
     title: 'Sugar',
-    image: './assets/download/Sugar.png',
+    image: './assets/download/Sugar.jpg',
   youtube: 'https://www.youtube.com/watch?v=zaCL9JWs-5Q',
   drive: 'https://drive.google.com/drive/folders/1ool8p1yR4QZYyTAlWmlR3xE8fUbatMBa'
   },
   {
     title: 'レモンスカッシュ',
-     image: './assets/download/lemonsquash.png',
+     image: './assets/download/lemonsquash.jpg',
   youtube: 'https://www.youtube.com/watch?v=LNYIu5YnY7A',
   drive: 'https://drive.google.com/drive/folders/1fXzaYjpIwim8eLedpQSh5QQZoBPVDcXQ'
   },
