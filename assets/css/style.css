@@ -1900,3 +1900,65 @@ body.lang-en #guideline .faq-list summary .lang-en {
     font-size: 1rem;
   }
 }
+.rule-card.ok h3::before {
+  content: "✔ ";
+  color: #5bbd7a;
+}
+
+.rule-card.ng h3::before {
+  content: "✖ ";
+  color: #e06b6b;
+}
+.rule-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.rule-card li {
+  position: relative;
+  padding-left: 1.8em;
+  margin-bottom: 10px;
+}
+
+/* OK側 */
+.rule-card.ok li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #6DBE7A;
+  font-weight: bold;
+}
+
+/* NG側 */
+.rule-card.ng li::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
+  color: #E37C7C;
+  font-weight: bold;
+}
+.rule-card h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.rule-card.ok h3 {
+  color: #3DAE68;
+}
+
+.rule-card.ng h3 {
+  color: #E25A6A;
+}
+
+.rule-card h3::before {
+  font-size: 1.1em;
+  margin-right: 6px;
+}
+.rule-card.ok h3::before {
+  color: #3DAE68;
+}
+
+.rule-card.ng h3::before {
+  color: #E25A6A;
+}
