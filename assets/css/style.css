@@ -1962,3 +1962,35 @@ body.lang-en #guideline .faq-list summary .lang-en {
 .rule-card.ng h3::before {
   color: #E25A6A;
 }
+.works-image {
+  width: 100%;
+  max-width: 280px;
+  display: block;
+  margin: 0 auto 24px;
+  border-radius: 12px;
+}
+.modal-panel {
+  text-align: center;
+}
+
+.works-image {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto 28px;
+  border-radius: 12px;
+}
+
+#works-title {
+  text-align: center;
+  margin: 24px 0 16px;
+  letter-spacing: 0.03em;
+}
+
+#works-artist,
+#works-role {
+  margin-bottom: 12px;
+}
+
+.modal-link-wrap {
+  margin-top: 28px;
+}

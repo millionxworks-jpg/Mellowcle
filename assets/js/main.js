@@ -283,12 +283,15 @@ const worksCards = document.querySelectorAll(".work-modal-trigger");
 const worksModal = document.querySelector(".works-modal");
 worksCards.forEach(card => {
   card.addEventListener("click", () => {
-    document.querySelector("#works-title").textContent = card.dataset.title;
-    document.querySelector("#works-artist").textContent = card.dataset.artist;
-    document.querySelector("#works-role").textContent = card.dataset.role;
-    document.querySelector("#works-link").href = card.dataset.url;
+document.querySelector("#works-title").textContent = card.dataset.title;
+document.querySelector("#works-artist").textContent = card.dataset.artist;
+document.querySelector("#works-role").textContent = card.dataset.role;
+document.querySelector("#works-link").href = card.dataset.url;
 
-    worksModal.classList.add("is-open");
+document.querySelector("#works-image").src = card.dataset.image;
+document.querySelector("#works-image").alt = card.dataset.title;
+
+worksModal.classList.add("is-open");
   });
 });
 
