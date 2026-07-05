@@ -1994,3 +1994,10 @@ body.lang-en #guideline .faq-list summary .lang-en {
 .modal-link-wrap {
   margin-top: 28px;
 }
+.hero {
+  background: #F08BB8; /* サイトに合わせたピンク */
+}
+.icon-links a[aria-label="X"] svg {
+  width: 20px;
+  height: 20px;
+}
