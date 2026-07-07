@@ -2001,3 +2001,19 @@ body.lang-en #guideline .faq-list summary .lang-en {
   width: 20px;
   height: 20px;
 }
+.song-item-dummy {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.dummy-jacket {
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  background: #f3f0ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}

@@ -16,6 +16,12 @@ const downloadLinks = document.querySelector('[data-download-links]');
 
 
 const songs = [
+     {
+    title: 'Gimme more!',
+     image: './assets/download/Gimme more.jpg',
+  youtube: 'https://www.youtube.com/watch?v=p1BHscS8O5w',
+  drive: 'https://drive.google.com/drive/folders/1-NT_4hJ9IfBkRjIolKLdlgVKiQNqeL3t'
+  },
     {
     title: 'Sugar (2026 Version)',
      image: './assets/download/Sugar2026.jpg',
@@ -76,6 +82,7 @@ const songs = [
   youtube: 'https://www.youtube.com/watch?v=LNYIu5YnY7A',
   drive: 'https://drive.google.com/drive/folders/1fXzaYjpIwim8eLedpQSh5QQZoBPVDcXQ'
   },
+  
 ];
 
 const renderNews = () => {
@@ -97,7 +104,7 @@ const renderNews = () => {
 const renderSongs = () => {
   if (!songList) return;
 
-  const cardSongs = songs.slice(0, 10);
+  const cardSongs = songs.slice(0, 11);
 
   const cardMarkup = cardSongs
     .map(
@@ -111,12 +118,21 @@ const renderSongs = () => {
       `
     )
     .join('');
+ const dummyMarkup = Array.from({ length: 4 }, () => `
+  <article class="song-item song-item-dummy" aria-hidden="true">
+    <div class="song-jacket-button dummy-jacket">
+      
+    </div>
+    <h3>COMING SOON</h3>
+  </article>
+`).join("");
 
   songList.innerHTML = `
-  <div class="song-card-grid" aria-label="人気楽曲">
-    ${cardMarkup}
-  </div>
-`;
+    <div class="song-card-grid" aria-label="画像付き楽曲カード">
+      ${cardMarkup}
+      ${dummyMarkup}
+    </div>
+  `;
 };
 
 songList?.addEventListener('click', (event) => {
