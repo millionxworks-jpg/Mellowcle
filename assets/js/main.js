@@ -119,12 +119,10 @@ const renderSongs = () => {
     )
     .join('');
  const dummyMarkup = Array.from({ length: 4 }, () => `
-  <article class="song-item song-item-dummy" aria-hidden="true">
-    <div class="song-jacket-button dummy-jacket">
-      
-    </div>
-    <h3></h3>
-  </article>
+<article class="song-item song-item-dummy" aria-hidden="true">
+  <div class="dummy-jacket"></div>
+  <h3>&nbsp;</h3>
+</article>
 `).join("");
 
   songList.innerHTML = `
