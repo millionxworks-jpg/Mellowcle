@@ -123,7 +123,7 @@ const renderSongs = () => {
     <div class="song-jacket-button dummy-jacket">
       
     </div>
-    <h3>COMING SOON</h3>
+    <h3></h3>
   </article>
 `).join("");
 
