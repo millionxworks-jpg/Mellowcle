@@ -118,11 +118,13 @@ const renderSongs = () => {
       `
     )
     .join('');
- const dummyMarkup = Array.from({ length: 4 }, () => `
-<article class="song-item song-item-dummy" aria-hidden="true">
-  <div class="dummy-jacket"></div>
-  <h3>&nbsp;</h3>
-</article>
+const dummyCount = window.innerWidth <= 768 ? 1 : 4;
+
+const dummyMarkup = Array.from({ length: dummyCount }, () => `
+  <article class="song-item song-item-dummy" aria-hidden="true">
+    <div class="dummy-jacket"></div>
+    <h3>&nbsp;</h3>
+  </article>
 `).join("");
 
   songList.innerHTML = `
@@ -187,6 +189,7 @@ const closeNewsModal = () => {
 
 renderNews();
 renderSongs();
+window.addEventListener("resize", renderSongs);
 
 document.querySelectorAll('[data-download-close]').forEach((button) => {
   button.addEventListener('click', () => {
