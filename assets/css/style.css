@@ -741,6 +741,15 @@ h3 {
 .download-intro .btn {
   flex: 0 0 auto;
 }
+.download-modal-image {
+  display: block;
+  width: min(100%, 260px);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto 20px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
 
 .all-data-box {
   padding: var(--card-padding);
@@ -1596,15 +1605,6 @@ body.wireframe .sound-toggle {
   background: rgba(39, 36, 42, 0.45);
 }
 
-.download-modal-panel {
-  position: relative;
-  z-index: 1;
-  width: min(100%, 420px);
-  padding: 28px;
-  border-radius: var(--radius);
-  background: #fff;
-}
-
 .download-modal-links {
   display: grid;
   gap: 10px;
@@ -1620,15 +1620,24 @@ body.wireframe .sound-toggle {
   font-weight: 800;
 }
 
-.download-modal-panel h2 {
-  font-size: 2rem;
-}
-
 .download-modal-links a:hover {
   transform: translateY(-2px);
   opacity: 0.9;
 }
+.download-modal-panel {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 420px);
+  margin: 0 auto;
+  padding: 28px;
+  border-radius: var(--radius);
+  background: #fff;
+  text-align: center;
+}
 
+.download-modal-panel h2 {
+  font-size: 2rem;
+}
 .song-jacket-button {
   display: block;
   width: 100%;

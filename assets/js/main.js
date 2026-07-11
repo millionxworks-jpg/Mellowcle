@@ -11,9 +11,8 @@ const newsModal = document.querySelector('[data-news-modal]');
 const modalPanel = document.querySelector('.modal-panel');
 const downloadModal = document.querySelector('[data-download-modal]');
 const downloadTitle = document.querySelector('[data-download-title]');
+const downloadImage = document.querySelector('[data-download-image]');
 const downloadLinks = document.querySelector('[data-download-links]');
-
-
 
 const songs = [
      {
@@ -142,9 +141,14 @@ songList?.addEventListener('click', (event) => {
   const song = songs.find((item) => item.title === button.dataset.downloadId);
   if (!song || !downloadModal || !downloadTitle || !downloadLinks) return;
 
-  downloadTitle.textContent = song.title;
+downloadTitle.textContent = song.title;
 
- downloadLinks.innerHTML = `
+if (downloadImage) {
+  downloadImage.src = song.image;
+  downloadImage.alt = `${song.title} jacket`;
+}
+
+downloadLinks.innerHTML = `
   <a href="${song.youtube}" target="_blank" rel="noreferrer">YouTube</a>
   <a href="${song.drive}" target="_blank" rel="noreferrer">素材DL (Drive)</a>
 `;
