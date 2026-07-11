@@ -161,6 +161,10 @@ textarea {
   display: none;
   width: 44px;
   height: 44px;
+  align-items: center;
+  justify-content: center;
+
+
   border: 1px solid var(--color-line);
   border-radius: var(--radius);
   background: #fff;
@@ -1098,22 +1102,35 @@ details p {
   backdrop-filter: blur(8px);
 }
 
-
 .modal-close {
   position: absolute;
   top: 14px;
   right: 14px;
-  display: grid;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 40px;
   height: 40px;
-  place-items: center;
+  padding: 0;
+
   border: 1px solid var(--color-line);
   border-radius: 50%;
   background: #fff;
   color: var(--color-text);
-  font-size: 1.5rem;
+
+  font-size: 0;
   line-height: 1;
   cursor: pointer;
+}
+
+.modal-close::before {
+  content: "×";
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1;
+  transform: translate(0px, 0px);
 }
 
 .modal-meta {
