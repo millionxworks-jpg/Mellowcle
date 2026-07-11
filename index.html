@@ -1,9 +1,6 @@
 <!doctype html>
 <html lang="ja">
 
-<!doctype html>
-<html lang="ja">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -84,30 +81,42 @@
 
 
 
-    <section class="section split" id="biography">
-      <div class="image-panel artist-square">
-        <img src="./assets/img/profile.jpg" alt="アーティスト写真" />
-      </div>
-      <div>
-        <h2>めろくる/Mellowcle</h2>
-        <p class="body-large">
-        <p><span class="pink-text">
-            日常にトキメキを、<br>世界にキラメキを、<br>未来にドキドキを、<br>
-            音楽と一緒に届けます</span></p>
-        <p>
-          <br>
-          【活動】
-          <br>2022年にボカロP活動を開始。
-          <br>おしゃれでカワイイ楽曲を中心に様々なジャンルの楽曲を制作。
-          <br>ボカロ作品投稿以外にも、声優・Vtuber・ゲームなどへの楽曲提供を行う。
-          <br><br>
-          【代表作】
-          <br>「SUPERHERO」feat.鏡音レン
-          <br>「Where shall we go?」feat.鏡音レン 鏡音リン
-          <br>「Mãos paracima! ~手を上げな~」feat.初音ミク
-          <br><br>
-        </p>
-        <div class="social-links icon-links" aria-label="SNSリンク">
+<section class="section split" id="biography">
+  <div class="image-panel artist-square">
+    <img src="./assets/img/profile.jpg" alt="アーティスト写真">
+  </div>
+
+  <div class="biography-content">
+    <h2>めろくる/Mellowcle</h2>
+
+    <p class="body-large pink-text">
+      日常にトキメキを、<br>
+      世界にキラメキを、<br>
+      未来にドキドキを、<br>
+      音楽と一緒に届けます
+    </p>
+
+    <div class="biography-block">
+      <p class="tag">ACTIVITY</p>
+
+      <p class="profile-text">
+  2022年にボカロP活動を開始。<br>
+        おしゃれでカワイイ楽曲を中心に様々なジャンルの楽曲を制作。<br>
+        ボカロ作品投稿以外にも、声優・Vtuber・ゲームなどへの楽曲提供を行う。
+      </p>
+    </div>
+
+    <div class="biography-block">
+      <p class="tag">FEATURED SONGS</p>
+
+      <p class="profile-text songs-text">
+        「SUPERHERO」feat.鏡音レン<br>
+        「Where shall we go?」feat.鏡音レン 鏡音リン<br>
+        「Mãos paracima! ~手を上げな~」feat.初音ミク
+      </p>
+    </div>
+
+    <div class="social-links icon-links" aria-label="SNSリンク">
 
          <a href="https://x.com/Mellowcle" target="_blank" rel="noreferrer" aria-label="X">
   <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -149,19 +158,18 @@
         </div>
       </div>
     </section>
-
 <section id="works" class="section">
-  <h2>WORKS</h2>
+  <div class="section-heading">
+    <h2>WORKS</h2>
 
-  <div class="works-copy">
-    <p class="jp-text">楽曲提供・制作実績</p>
+    <div class="section-copy">
+      <p class="jp-text">楽曲提供・制作実績</p>
+      <p class="en-text">Music Production & Credits</p>
+    </div>
   </div>
 
-
-  <div class="works-box">
-    <div class="works-copy">
-    </div>
-
+  <div class="section-body">
+    <div class="works-box">
       <div class="card-grid">
         <button class="work-card works-card work-modal-trigger" type="button" data-title="Gimme more!"
           data-artist="『プロジェクトセカイ カラフルステージ！ feat. 初音ミク』MORE MORE JUMP！さま" data-role=" Lyrics / Composed / Arranged " data-url="https://www.youtube.com/watch?v=7bC8xdanmiY"
@@ -238,13 +246,11 @@
           </div>
         </button>
       </div>
-    </section>
-
-
-    </button>
     </div>
-    </section>
-    <div class="modal works-modal" aria-hidden="true">
+  </div>
+</section>
+
+<div class="modal works-modal" aria-hidden="true">
       <div class="modal-backdrop" data-works-close></div>
 
     <article class="modal-panel" role="dialog" aria-modal="true">
@@ -271,10 +277,12 @@
 
         <div class="section-copy">
           <p class="jp-text">ジャケットをクリックして、各配信サイトで楽曲をお楽しみください</p>
+          <p class="en-text">Click a cover to listen on your favorite streaming service.</p>
         </div>
       </div>
 
-      <div class="card-grid">
+      <div class="section-body">
+<div class="card-grid">
       <a class="work-card" href="https://nodee.net/a/c0i2wbqbzshg" target="_blank" rel="noreferrer">
           <img src="./assets/download/Gimme more.jpg" alt="Gimme more jacket" />
           <div class="work-card-body">
@@ -314,6 +322,7 @@
           ALL DISCOGRAPHY →
         </a>
       </p>
+      </div>
     </section>
 
 
@@ -321,7 +330,9 @@
       <div class="section-heading">
         <h2>DOWNLOAD</h2>
       </div>
-      <div class="download-intro">
+
+      <div class="section-body">
+<div class="download-intro">
 
 
         <div class="section-copy">
@@ -336,22 +347,21 @@
         <h3>Top Picks</h3>
         <div class="song-list" aria-label="全楽曲一覧" data-song-list></div>
       </div>
+      </div>
     </section>
 
     <section class="section" id="guideline">
       <div class="section-heading">
         <h2>GUIDELINE</h2>
-
-
         <div class="section-copy">
-          <p class="jp-text">ご利用前に利用規約をご確認ください
-          </p>
+          <p class="jp-text">ご利用前に利用規約をご確認ください</p>
           <p class="en-text">Please check the guidelines before use.</p>
         </div>
 
       </div>
 
-      <div class="guideline-tabs">
+      <div class="section-body">
+<div class="guideline-tabs">
         <button class="lang-tab active" data-lang="ja">日本語</button>
         <button class="lang-tab" data-lang="en">English</button>
       </div>
@@ -454,29 +464,43 @@ Cover by: [Your Name]
           </p>
         </details>
       </div>
+      </div>
+    </section>
 
-      <section class="section goods-section" id="goods">
-        <div class="goods-copy">
-          <h2>GOODS</h2>
-          <div class="section-copy">
-            <p class="jp-text">CD、アクリルグッズなどの通販情報はこちら</p>
+    <section class="section goods-section" id="goods">
+  <div class="section-heading">
+    <h2>GOODS</h2>
 
-          </div>
+    <div class="section-copy">
+      <p class="jp-text">CD、アクリルグッズなどの通販情報はこちら</p>
+      <p class="en-text">Visit the online shop for CDs, acrylic goods, and more.</p>
+    </div>
+  </div>
 
-          <a class="btn btn-primary" href="https://mellowcle.booth.pm/" target="_blank" rel="noreferrer">BOOTH →</a>
-        </div>
-      </section>
+  <div class="section-body">
+    <a
+    class="btn btn-primary"
+    href="https://mellowcle.booth.pm/"
+    target="_blank"
+    rel="noreferrer"
+  >
+    BOOTH →
+  </a>
+  </div>
+</section>
 
       <section class="section contact-section" id="contact">
         <div class="section-heading contact-heading">
           <h2>CONTACT</h2>
           <div class="section-copy">
             <p class="jp-text">お仕事のご依頼、楽曲利用、その他のお問い合わせはこちらから</p>
-            <p class="en-text"> Commissions, Licensing & Inquiries            </p>
+            <p class="en-text">Commissions, Licensing &amp; Inquiries</p>
           </div>
 
         </div>
-        <div class="contact-layout">
+
+        <div class="section-body">
+          <div class="contact-layout">
           <div class="contact-card">
             <p class="tag">Mail</p>
             <p class="mail">mellowcle [★] gmail.com</p>
@@ -488,6 +512,7 @@ Cover by: [Your Name]
           </div>
 
         </div>
+        </div>
       </section>
   </main>
 
@@ -496,7 +521,7 @@ Cover by: [Your Name]
     <div class="download-modal-backdrop" data-download-close></div>
 
     <div class="download-modal-panel">
-      <button type="button" class="modal-close" data-download-close>×</button>
+      <button type="button" class="modal-close" data-download-close aria-label="閉じる">×</button>
       <h2 data-download-title>DOWNLOAD</h2>
       <div class="download-modal-links" data-download-links></div>
     </div>
@@ -533,7 +558,7 @@ Cover by: [Your Name]
 
   <div id="video-modal" class="video-modal hidden">
     <div class="video-box">
-      <button id="close-video">×</button>
+      <button id="close-video" type="button" aria-label="動画を閉じる">×</button>
       <video id="video-player" controls></video>
     </div>
   </div>

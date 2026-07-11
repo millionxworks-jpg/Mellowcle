@@ -290,10 +290,10 @@ document.querySelectorAll(".work-card[data-video]").forEach(card => {
   });
 });
 
-closeBtn.addEventListener("click", () => {
-  modal.classList.add("hidden");
-  player.pause();
-  player.currentTime = 0;
+closeBtn?.addEventListener("click", () => {
+  modal?.classList.add("hidden");
+  player?.pause();
+  if (player) player.currentTime = 0;
 });
 
 const worksCards = document.querySelectorAll(".work-modal-trigger");
@@ -308,14 +308,17 @@ document.querySelector("#works-link").href = card.dataset.url;
 document.querySelector("#works-image").src = card.dataset.image;
 document.querySelector("#works-image").alt = card.dataset.title;
 
-worksModal.classList.add("is-open");
+worksModal?.classList.add("is-open");
+worksModal?.setAttribute("aria-hidden", "false");
+document.body.classList.add("modal-open");
   });
 });
 
 document.querySelectorAll("[data-works-close]").forEach((button) => {
   button.addEventListener("click", () => {
-    worksModal.classList.remove("is-open");
-    worksModal.setAttribute("aria-hidden", "true");
+    worksModal?.classList.remove("is-open");
+    worksModal?.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
   });
 });
 const tabs = document.querySelectorAll(".lang-tab");
@@ -325,7 +328,7 @@ tabs.forEach(tab => {
     tabs.forEach(t => t.classList.remove("active"));
     tab.classList.add("active");
 
-    copyStatus.textContent = ''; // ← ここ！
+    if (copyStatus) copyStatus.textContent = '';
 
     if (tab.dataset.lang === "en") {
       document.body.classList.add("lang-en");
@@ -357,4 +360,20 @@ copyButton?.addEventListener('click', async () => {
   window.setTimeout(() => {
     copyStatus.textContent = '';
   }, 2600);
+});
+
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") return;
+
+  if (worksModal?.classList.contains("is-open")) {
+    worksModal.classList.remove("is-open");
+    worksModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+  }
+
+  if (downloadModal?.classList.contains("is-open")) {
+    downloadModal.classList.remove("is-open");
+    downloadModal.setAttribute("aria-hidden", "true");
+  }
 });
