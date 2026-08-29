@@ -304,8 +304,10 @@ const worksCards = document.querySelectorAll(".work-modal-trigger");
 const worksModal = document.querySelector(".works-modal");
 worksCards.forEach(card => {
   card.addEventListener("click", () => {
-document.querySelector("#works-title").textContent = card.dataset.title;
-document.querySelector("#works-artist").textContent = card.dataset.artist;
+document.querySelector("#works-title").innerHTML =
+  card.dataset.title.replaceAll("｜", "<br>");
+document.querySelector("#works-artist").innerHTML =
+  card.dataset.artist.replaceAll("｜", "<br>");
 document.querySelector("#works-role").textContent = card.dataset.role;
 document.querySelector("#works-link").href = card.dataset.url;
 
@@ -380,4 +382,17 @@ document.addEventListener("keydown", (event) => {
     downloadModal.classList.remove("is-open");
     downloadModal.setAttribute("aria-hidden", "true");
   }
+});
+
+const viewMoreBtn = document.querySelector(".works-view-more");
+const moreWorks = document.querySelectorAll(".works-more");
+
+viewMoreBtn?.addEventListener("click", () => {
+  const isOpen = viewMoreBtn.classList.toggle("is-open");
+
+  moreWorks.forEach(work => {
+    work.classList.toggle("is-visible", isOpen);
+  });
+
+  viewMoreBtn.textContent = isOpen ? "View less" : "View more";
 });

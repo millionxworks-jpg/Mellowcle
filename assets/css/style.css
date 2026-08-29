@@ -1187,6 +1187,7 @@ details p {
   margin: 22px 0 0;
 }
 
+
 @media (max-width: 768px) {
   .works-modal .modal-panel {
     margin: auto;
@@ -2135,4 +2136,82 @@ body.lang-en #guideline .faq-list summary .lang-en {
     gap: 24px;
     justify-content: center;
   }
+}
+/* Works - View more */
+#works .work-card.works-more {
+  display: none;
+}
+
+#works .work-card.works-more.is-visible {
+  display: flex;
+}
+
+.works-view-more {
+  display: block;
+  margin: 32px auto 0;
+}
+.works-view-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+margin: 20px auto 0;
+  padding: 11px 26px;
+
+  border: 1.5px solid var(--color-rose);
+  border-radius: 999px;
+
+  background: #fff;
+  color: var(--color-rose);
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.works-view-more::after {
+  content: "↓";
+  font-size: 0.9rem;
+}
+
+.works-view-more:hover {
+  background: var(--color-rose);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(233, 92, 139, 0.2);
+}
+.works-view-more::after {
+  content: "↓";
+  font-size: 0.9rem;
+}
+
+.works-view-more.is-open::after {
+  content: "↑";
+}
+#works-title {
+  text-align: center;
+  margin: 24px 0 16px;
+  font-size: clamp(1.25rem, 3vw, 1.7rem);
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+}
+
+#works-artist {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--color-muted);
+}
+
+#works-role {
+  margin-top: 20px;
+  font-size: 0.9rem;
 }
