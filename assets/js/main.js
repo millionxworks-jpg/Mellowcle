@@ -15,6 +15,12 @@ const downloadImage = document.querySelector('[data-download-image]');
 const downloadLinks = document.querySelector('[data-download-links]');
 
 const songs = [
+  {
+    title: 'CANDY ZOMBIE',
+     image: './assets/download/CANDY_ZOMBIE.jpg',
+  youtube: 'https://www.youtube.com/watch?v=w2wgQpvcvnI&feature=youtu.be',
+  drive: 'https://drive.google.com/drive/folders/1mWZaceQHdN1i8eWj549QyrRjJ_IXEKzJ'
+  },
      {
     title: 'Gimme more!',
      image: './assets/download/Gimme more.jpg',
