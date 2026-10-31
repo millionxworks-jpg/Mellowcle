@@ -109,7 +109,7 @@ const renderNews = () => {
 const renderSongs = () => {
   if (!songList) return;
 
-  const cardSongs = songs.slice(0, 11);
+  const cardSongs = songs.slice(0, 12);
 
   const cardMarkup = cardSongs
     .map(
@@ -123,7 +123,7 @@ const renderSongs = () => {
       `
     )
     .join('');
-const dummyCount = window.innerWidth <= 768 ? 1 : 4;
+const dummyCount = window.innerWidth <= 768 ? 1 : 3;
 
 const dummyMarkup = Array.from({ length: dummyCount }, () => `
   <article class="song-item song-item-dummy" aria-hidden="true">
